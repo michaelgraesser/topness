@@ -1,0 +1,43 @@
+
+
+This directory contains a simple c++ program illustrating how to call the topness routine, for use in analysing events 
+produced at hadron colliders, such as the Large Hadron Collider. 
+
+The topness routine is designed to discriminate against the pair production of top quarks, in which the final state contains a single lepton. 
+This algorithm is described further in 
+
+Hunting Mixed Top Squark Decays
+Michael L. Graesser, Jessie Shelton
+Phys.Rev.Lett. 111 (2013) 12, 121802
+DOI: 10.1103/PhysRevLett.111.121802
+arXiv:1212.4495
+
+ 
+_____
+
+Usage
+_____
+
+
+After setting the enviromental variable (topness_alpha) to point to the top level directory topness_alpha, containing the example and source directories, 
+
+simply go to example/ and type 
+
+make test 
+
+to create the executable. To run, type 
+
+./test 
+
+No additional inputs at the command line are needed. Source code has been tested on Linux and MacOSX. 
+
+test computes S, where the topness value of a sample event is ln S. In test.cpp two fake events are provided, as well as the example parameters used in 
+the reference above. 
+
+This code comes with two additional directories (source/my_Nelder_Mead and source/topness) containing the custom source code needed to determine topness for an input event.
+
+For more details, please see the above reference and/or the source code provided.  
+ 
+Please cite the above article if using topness. 
+
+The code is written by Michael L. Graesser.
